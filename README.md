@@ -1,4 +1,3 @@
-# hello_world
-This is yet another hello world tutorial repository from GitHub Guides.
+# my github.io site
 
-I had a banh mi sandwich and pâté chaud for dinner tonight.
+I think this will be where I keep notes about technical things.
