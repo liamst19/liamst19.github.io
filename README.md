@@ -1,2 +1,4 @@
 # hello_world
-yet another hello world repository
+This is yet another hello world tutorial repository from GitHub Guides.
+
+I had a banh mi sandwich and pâté chaud for dinner tonight.
