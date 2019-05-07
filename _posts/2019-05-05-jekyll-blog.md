@@ -68,11 +68,11 @@ Note the `.` at the end, which specifies the current directory as path. Now ther
 $ bundle exec jekyll serve
 ```
 
-which should be accessible by visiting [http://127.0.0.1:4000](http://127.0.0.1:4000) on your browser.
+A skeleton website with a "minima" theme should now be accessible by visiting [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser.
 
 ### 6. Set up Jekyll for GitHub
 
-Open `Gemfile` with a text editor. Find the following line, around line 11:
+Open `Gemfiles` with a text editor. Find the following line, around line 11:
 
 ```
 gem "jekyll", "~> 3.8.5"
