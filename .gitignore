@@ -24,6 +24,24 @@ cscope.po.out
 .sass-cache/
 .jekyll-metadata
 
+# directories
+/vendor
+bbin/
+bin/
+coverage
+gh-pages/
+pkg/
+test/dest
+tmp/*
+
+# Ruby
+.bundle/
+.byebug_history
+.ruby-gemset
+.ruby-version
+*.gem
+Gemfile.lock
+
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
