@@ -10,7 +10,7 @@ It appears that, if you don't configure your account email settings correctly in
  - [GitHub Privacy 101: How to remove personal emails from your public repos - freeCodeCamp](https://medium.freecodecamp.org/github-privacy-101-how-to-remove-personal-emails-from-your-public-repos-58347b06a508)
 
 
-GitHub does provide an option to mask your commit email address, replacing it with a redirect e-mail which looks like: `<a generated number>+<your username>@users.noreply.github.com`. It's under `Personal Settings` → `Emails`.
+GitHub does provide an option to mask your commit email address, replacing it with a redirect e-mail which looks like: `<a generated number>+<your username>@users.noreply.github.com`. It's under `Personal Settings` → `[Emails](https://github.com/settings/emails)`.
 
 There is also a way to go through and edit your commit histories. The following has the instructions with a bash script you can run:
 
