@@ -116,4 +116,4 @@ int main(int argc, char *argv[]){
 }
 ```
 
-More realistically, you would probably be creating a class with separate methods for initializing, creating, rendering, destroying, etc.
+More realistically, there'd be a `while` loop keeping a window open until some exit event (e.g. esc key, mouse click on the close button) is triggered, and you would probably be creating a class with separate methods for initializing, creating, rendering, destroying, etc.
