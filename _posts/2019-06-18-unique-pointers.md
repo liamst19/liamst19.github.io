@@ -5,6 +5,9 @@ date: 2019-06-18
 categories: C++
 ---
 
+[Source code version](https://github.com/liamst19/notes-ptr-vector/blob/master/ptr-notes.cpp).
+
+
 As I noted in my previous post, lately I have been trying to learn C++ by [working on an /Asteroids/-like game](https://github.com/liamst19/asteroids-study). One of my thoughts was that the shapes of the asteroids should be procedurally generated, instead of having a bitmap image with fixed number of predrawn asteroids, [which was how the example project in the book I was reading is designed](https://github.com/gameprogcpp/code/tree/master/Chapter03).
 
 A drawing, I thought, would be made up of small pieces, such as a point/pixel, a line, a circle, etc. It would also have a method for displaying the piece to the screen. So, I presumed, there'd be an abstract class like the following:
@@ -166,3 +169,5 @@ for(auto& element_ptr: _drawing_u_ptrs){
 ```
 
 In this case there is no need to call `clear_drawing_ptrs` as we did with the standard pointers. It is safer because we won't run the risk of forgetting them, causing memory leaks.
+
+[Here is the source code version of my notes](https://github.com/liamst19/notes-ptr-vector/blob/master/ptr-notes.cpp).
