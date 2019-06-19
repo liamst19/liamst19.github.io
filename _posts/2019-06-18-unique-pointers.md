@@ -168,6 +168,6 @@ for(auto& element_ptr: _drawing_u_ptrs){
 }
 ```
 
-In this case there is no need to call `clear_drawing_ptrs` as we did with the standard pointers. It is safer because we won't run the risk of forgetting them, causing memory leaks.
+In this case there is no need to call `clear_drawing_ptrs()` as we did with the standard pointers. It is safer because we won't run the risk of forgetting them, causing memory leaks. I've also used `emplace_back` instead of `push_back`; allegedly, this ensures that the pointers are moved, and not copied.
 
 [Here is the source code version of my notes](https://github.com/liamst19/notes-ptr-vector/blob/master/ptr-notes.cpp).
