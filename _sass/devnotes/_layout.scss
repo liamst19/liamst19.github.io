@@ -90,3 +90,48 @@
 .page-content{
 
 }
+
+/** Home page banner
+ */
+.site-header.home{
+    min-height: $spacing-unit * 6;
+    margin: 30px 0 50px;
+    padding: 50px 0 25px;
+    text-align: center;
+}
+
+.site-header.home .site-title{
+    font-size: 144px;
+}
+
+.post-list{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.post-list li{
+    margin-bottom: 10px;
+}
+
+.post-meta{
+    font-size: 14px;
+    color: #999999;
+}
+
+.post-list h3{
+//    font-family: $title-font-family;
+    font-size: 22px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.post-link{
+    color: $brand-color2;
+    text-decoration: none;
+}
+
+.post-link:hover{
+    text-decoration: underline;
+}
