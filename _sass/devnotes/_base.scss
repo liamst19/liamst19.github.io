@@ -103,6 +103,7 @@ a {
  */
 pre, code{
     font: $code-font-weight #{$code-font-size}/#{$code-line-height} $code-font-family, monospace;
+    overflow: scroll;
 }
 
 pre{
