@@ -94,29 +94,23 @@
 
 /** Home page banner
  */
+.site-header.home{
+    min-height: $spacing-unit * 6;
+    margin: 30px 0 50px;
+    padding: 50px 0 25px;
+    text-align: center;
 
-@include media-query($on-laptop){
-    .site-header.home{
-        min-height: $spacing-unit * 6;
-        margin: 30px 0 50px;
-        padding: 50px 0 25px;
-        text-align: center;
-    }
-
-    .site-header.home .site-title{
-        font-size: 144px;
-    }
-}
-
-@include media-query($on-palm){
-    .site-header.home{
+    @include media-query($on-palm){
         min-height: $spacing-unit * 2;
         margin: 20px 0 25px;
         padding: 25px 0 10px;
-        text-align: center;
     }
+}
 
-    .site-header.home .site-title{
+.site-header.home .site-title{
+    font-size: 144px;
+
+    @include media-query($on-palm){
         font-size: 72px;
     }
 }
