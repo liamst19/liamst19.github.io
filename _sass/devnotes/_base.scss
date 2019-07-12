@@ -35,7 +35,7 @@ body {
     letter-spacing: $base-letter-spacing;
     line-height: $base-line-height;
 
-   -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings:    "kern" 1;
     -o-font-feature-settings:      "kern" 1;
@@ -46,7 +46,7 @@ body {
     margin: 0;
     color: $text-color;
     background-color: $background-color;
-     display:        flex;
+    display:        flex;
     flex-direction: column;
 }
 
@@ -135,6 +135,14 @@ h1{
 /** Site Title
  */
 
+.site-header.home .site-title{
+    font-size: 144px;
+
+    @include media-query($on-palm){
+        font-size: 72px;
+    }
+}
+
 .site-title,
 .site-title:hover,
 .site-title:visited{
@@ -144,6 +152,32 @@ h1{
     text-decoration: none;
     letter-spacing: -0.04em;
     color: $brand-color;
+}
+
+.site-title .title-cursor{
+    font-family: $code-font-family;
+    margin-bottom: 5px;
+    animation: 1s blinker linear infinite;
+    -webkit-animation: 1s blinker linear infinite;
+    -moz-animation: 1s blinker linear infinite;
+
+    @-moz-keyframes blinker {
+        0%   { opacity: 1.0; }
+        50%  { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @-webkit-keyframes blinker {
+        0%   { opacity: 1.0; }
+        50%  { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @keyframes blinker {
+        0%   { opacity: 1.0; }
+        50%  { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
 }
 
 /**
@@ -175,13 +209,13 @@ h1{
     padding: 8px 10px;
     color: #777777;
     font-size: 24px;
-//    font-family: $title-font-family;
+    //    font-family: $title-font-family;
 }
 
 .post-list{
     list-style-type: none;
     margin: 0;
-    padding: 1px 0;
+    padding: 0;
     // border-top: 3px solid #ffed99;
     border-bottom: 1px solid #ffed33;
 }
@@ -189,12 +223,31 @@ h1{
 .post-list li{
     border-top:    1px solid #ffed33;
     margin-bottom: 0px;
-    padding: 0 10px;
+    padding: 5px 10px;
+    display: flex;
 }
 
 .post-list h3{
+    flex-direction: column;
+    width: 88%;
     font-size: 18px;
-    margin-bottom: 5px;
+    margin: 0;
+}
+
+.post-list .post-meta{
+    flex-direction: column;
+    width: 12%;
+}
+
+.post-list h3 a{
+    color: $brand-color;
+    background-color: #777;
+    padding: 0 2px;
+
+    &:hover{
+        color: $brand-color2;
+        background-color: #CCC;
+    }
 }
 
 .post-meta{
@@ -216,7 +269,7 @@ h1{
 .post hr{
     border-color: #ffed66;
     border-style: solid;
-//    border-radius: 3px;
+    //    border-radius: 3px;
 }
 
 .post-hr{
