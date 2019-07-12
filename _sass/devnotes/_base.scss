@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6{
 h1{
     color: $brand-color2;
     font-size: 38px;
-//    line-height: 1;
+    //    line-height: 1;
 }
 
 /** Site Title
@@ -142,7 +142,7 @@ h1{
 }
 
 .site-title .title-cursor{
-//    color: #dddddd;
+    //    color: #dddddd;
     font-family: $code-font-family;
     margin-bottom: 5px;
     animation: 1s blinker linear infinite;
@@ -168,6 +168,11 @@ h1{
     }
 }
 
+hr.home-hr{
+    margin: 2px 0;
+    color: $grey-color-light;
+}
+
 /**
  * Icons
  */
@@ -191,59 +196,12 @@ h1{
 /** Posts
  */
 
-.post-list-heading{
-    background-color: $yellow-color;
-    margin: 0;
-    padding: 8px 10px;
-    color: $grey-color;
-    font-size: 24px;
-    //    font-family: $title-font-family;
-}
-
-.post-list{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    // border-top: 3px solid #ffed99;
-    border-bottom: 1px solid $yellow-color;
-}
-
-.post-list li{
-    border-top:    1px solid $yellow-color;
-    margin: 0px;
-    padding: 10px 10px 5px;
-    display: flex;
-}
-
-.post-list h3{
-    flex-direction: column;
-    width: 90%;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-}
-
-.post-list .post-meta{
-    flex-direction: column;
-    width: 100px;
-}
-
-.post-list h3 a{
-    color: $brand-color2;
-    background-color: $grey-color;
-    padding: 0 2px;
-
-    &:hover{
-        color: darken($brand-color2, 25%);
-        background-color: $grey-color-light;
-    }
-}
-
 .post-meta{
     font-size: 14px;
     font-family: $title-font-family;
     font-weight: 400;
     color: $grey-color;
+    line-height: 1.45;
 }
 
 .post-link{
@@ -264,6 +222,99 @@ h1{
 .post-hr{
     border-width: 5px;
     margin: 0;
+}
+
+.post-list-heading{
+    background-color: $yellow-color;
+    margin: 0;
+    padding: 8px 10px;
+    color: $grey-color;
+    font-size: 24px;
+    //    font-family: $title-font-family;
+}
+
+.post-list{
+    //   background-color: $yellow-color-light;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $yellow-color;
+}
+
+.post-list > li{
+    border-top: 1px solid $yellow-color;
+    margin: 0px;
+    padding: 10px 10px 5px;
+}
+
+.post-list .post-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-list .post-meta{
+    min-width: 90px;
+    padding: 0;
+    margin: 0;
+
+    @include media-query($on-palm){
+        font-size: 12px;
+        min-width: 50px;
+    }
+}
+
+.post-list .post{
+    flex: auto;
+    min-width: 90%;
+    padding: 0;
+    margin: 0;
+}
+
+.post-list .post .post-full-link{
+    font-family: $header-font-family;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.post-list .post .post-full-link a{
+    color: $brand-color;
+}
+
+.post-list .post h3{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.post-list .post h3 a{
+    color: $brand-color2;
+    background-color: $grey-color;
+    padding: 0 2px;
+
+    &:hover{
+        color: darken($brand-color2, 25%);
+        background-color: $grey-color-light;
+    }
+}
+
+.post-list .post .post-excerpt{
+    padding: 10px 0 0 0;
+    font-size: 16px;
+
+    @include media-query($on-palm){
+        font-size: 14px;
+
+        pre, code{
+            font-size: 12px;
+        }
+    }
+
+    ul, ol{
+        padding: 0.5em 1.5em;
+        margin: 0;
+    }
 }
 
 .post-header .post-meta{

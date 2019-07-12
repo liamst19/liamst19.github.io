@@ -7,6 +7,8 @@ categories: SDL C++
 
 [SDL (Simple DirectMedia Layer)](https://www.libsdl.org/) is an open source library used to manage and simplify interactions with the computer's multimedia hardware components, for example, diplaying images on the monitor screen, receiving input from keyboard and mouse, and playing sounds on the speaker. It's commonly used to make games, so much so that allegedly [it is often misconceived as a game engine](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer). I've been using, for my [pong](https://github.com/liamst19/pong-study) and [asteroids](https://github.com/liamst19/asteroids-study) projects.
 
+<!--more-->
+
 ## Setting up SDL in MSYS2
 
 ### Install SDL and other required packages in MSYS2:

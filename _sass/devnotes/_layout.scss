@@ -17,6 +17,7 @@
 /* Header */
 .site-header{
     background-color: $grey-color-light;
+    text-align: center;
     padding: 5px;
     border-bottom: 2px solid $grey-color-light2;
 }
@@ -24,15 +25,16 @@
 /** Home page banner
  */
 .site-header.home{
-    margin: 20px 0 30px 0;
+    background-color: $grey-color;
+    margin: 20px 0 0;
     padding: 125px 0;
-    text-align: center;
     border: none;
+    // border-bottom: 5px solid $grey-color;
 
     @include media-query($on-palm){
         min-height: $spacing-unit * 2;
-        margin: 10px 0 25px;
-        padding: 25px 0;
+        margin: 10px 0 0;
+        padding: 75px 0;
     }
 }
 
@@ -108,23 +110,25 @@
 
 /* Body */
 .page-content{
+    margin-top: 15px;
+}
 
+.post-header{
 }
 
 .post-header-wrapper{
     display: flex;
+    flex-direction: row;
     width: 100%;
 }
 
 .post-header .post-meta{
-    flex-direction: column;
-    width: 15%;
+    min-width: 85px;
     padding: 10px;
 }
 
 .post-header .post-title{
-    flex-direction: column;
-    width: 85%;
+    flex: auto;
     border-right: 2px solid $yellow-color;
     padding: 5px 5px;
     margin: 0;

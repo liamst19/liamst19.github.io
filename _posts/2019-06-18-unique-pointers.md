@@ -10,6 +10,8 @@ categories: C++
 
 As I noted in my previous post, lately I have been trying to learn C++ by [working on an *Asteroids*-like game](https://github.com/liamst19/asteroids-study). One of my thoughts was that the shapes of the asteroids should be procedurally generated, instead of having a bitmap image with fixed number of predrawn asteroids, [which was how the example project in the book I was reading is designed](https://github.com/gameprogcpp/code/tree/master/Chapter03).
 
+<!--more-->
+
 A drawing, I thought, would be made up of small pieces, such as a point/pixel, a line, a circle, etc. It would also have a method for displaying the piece to the screen. So, I presumed, there'd be an abstract class like the following:
 
 ```c++

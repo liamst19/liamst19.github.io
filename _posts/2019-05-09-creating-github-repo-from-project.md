@@ -28,4 +28,3 @@ The important point is to do `git pull` before adding and commiting anything, *a
 $ git pull origin master --allow-unrelated-histories
 $ git push --set-upstream origin master
 ```
-

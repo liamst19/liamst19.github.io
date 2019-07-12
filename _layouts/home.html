@@ -10,6 +10,7 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
+        <hr class="home-hr" />
         <div class="home">
           {% if page.title -%}
           <h1 class="page-heading">{{ page.title }}</h1>
@@ -22,14 +23,31 @@
           <ul class="post-list">
             {%- for post in site.posts -%}
             <li>
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <span class="post-meta">{{ post.date | date: date_format }}</span>
-              <h3><a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escapt }}
-              </a></h3>
-              {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-              {%- endif -%}
+              <div class="post-container">
+                <div class="post-meta">
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  {{ post.date | date: date_format }}
+                </div>
+                <div class="post">
+                  <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                      {{ post.title | escape }}
+                    </a>
+                  </h3>
+                  {%- if site.show_excerpts -%}
+                  <div class="post-excerpt">
+                    {%- if post.content contains site.excerpt_separator -%}
+                    {{ post.excerpt }}
+                    <p class="post-full-link">
+                      <a href="{{ post.url | relative_url }}">-- continue reading --</a>
+                    </p>
+                    {%- else -%}
+                    {{ post.content }}
+                    {%- endif -%}
+                  </div>
+                  {%- endif -%}
+                </div>
+              </div>
             </li>
             {%- endfor -%}
           </ul>

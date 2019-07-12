@@ -3,8 +3,11 @@ layout: post
 title: Setting up Ruby+Devkit/Bundler/Jekyll on Windows, for github.io
 date: 2019-05-05
 categories: GitHub jekyll
+excerpt_separator: <!--more-->
 ---
 I've been playing around with jekyll for this GitHub Pages site. The instructions I came across were a bit confusing, and it took some time to get it reliably set up (although I am still not sure how reliable this site is). As record I'm listing the steps here, that finally seemed to work.
+
+<!--more-->
 
 ## Installing Jekyll on Windows
 
