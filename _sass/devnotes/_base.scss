@@ -123,6 +123,7 @@ h1, h2, h3, h4, h5, h6{
     color: #333333;
     font-family: $header-font-family;
     font-weight: $header-font-weight;
+    line-height: $header-line-height;
 }
 
 h1{
@@ -168,29 +169,39 @@ h1{
 /** Posts
  */
 
+.post-list-heading{
+    background-color: #ffed33;
+    margin: 0;
+    padding: 8px 10px;
+    color: #777777;
+    font-size: 24px;
+//    font-family: $title-font-family;
+}
+
 .post-list{
     list-style-type: none;
     margin: 0;
-    padding-left: 10px;
+    padding: 1px 0;
+    // border-top: 3px solid #ffed99;
+    border-bottom: 1px solid #ffed33;
 }
 
 .post-list li{
-    margin-bottom: 10px;
-}
-
-.post-meta{
-    font-size: 16px;
-    font-family: $title-font-family;
-    font-weight: 400;
-    color: #999999;
+    border-top:    1px solid #ffed33;
+    margin-bottom: 0px;
+    padding: 0 10px;
 }
 
 .post-list h3{
-//    font-family: $title-font-family;
-    font-size: 22px;
-    line-height: 1;
-    padding: 0;
-    margin: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.post-meta{
+    font-size: 14px;
+    font-family: $title-font-family;
+    font-weight: 400;
+    color: #777777;
 }
 
 .post-link{
@@ -200,4 +211,37 @@ h1{
 
 .post-link:hover{
     text-decoration: underline;
+}
+
+.post hr{
+    border-color: #ffed66;
+    border-style: solid;
+//    border-radius: 3px;
+}
+
+.post-hr{
+    border-width: 5px;
+    margin: 0;
+}
+
+.post-title-hr1{
+    border-width: 3px;
+}
+
+.post-title-hr2{
+    border-width: 1px;
+    margin-top: -7px;
+}
+
+.post-title-hr3{
+    border-width: 1px;
+}
+
+.post-title-hr4{
+    border-width: 3px;
+    margin-top: -7px;
+}
+
+.post-header .post-meta{
+    margin-top: -5px;
 }

@@ -6,7 +6,7 @@ $base-font-family: "Lora";
 
 $base-font-size:   18px !default;
 $base-font-weight: 500 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.45 !default;
 $base-letter-spacing: 0;
 
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -16,6 +16,7 @@ $title-font-weight: 700;
 
 $header-font-family: "Raleway";
 $header-font-weight: 700;
+$header-line-height: 1;
 
 $code-font-family: "Source Code Pro";
 $code-font-size:   14px !default;

@@ -3,7 +3,6 @@
 .site-header{
     background-color: #777777;
     border-bottom: 3px solid #666666;
-    margin-bottom: 25px;
     padding-left: 20px;
     @include media-query($on-palm){
         padding-left: 0;
@@ -85,11 +84,38 @@
 
 }
 
+.post-header-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.post-header .post-meta{
+    flex-direction: column;
+    width: 15%;
+    padding: 10px;
+}
+
+.post-header .post-title{
+    flex-direction: column;
+    width: 85%;
+    border-right: 2px solid #ffed66;
+    padding: 5px;
+    margin: 0;
+}
+
+.post{
+    margin-top: 20px;
+}
+
+.post-content{
+    padding: 25px 10px;
+}
+
 /** Home page banner
  */
 .site-header.home{
     min-height: $spacing-unit * 6;
-    margin: 30px 0 50px;
+    margin: 20px 0;
     padding: 50px 0 25px;
     text-align: center;
 

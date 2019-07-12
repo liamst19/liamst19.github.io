@@ -3,6 +3,7 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
+    <div class="post-header-wrapper">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -11,12 +12,18 @@ layout: default
       </time>
       {%- if page.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+    </p>
+    </div>
   </header>
+
+  <hr class="post-hr"/>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <hr class="post-hr"/>
 
   {%- if site.disqus.shortname -%}
   {%- include disqus_comments.html -%}
