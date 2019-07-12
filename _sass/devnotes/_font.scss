@@ -1,0 +1,27 @@
+
+// Download web fonts
+@import url('https://fonts.googleapis.com/css?family=Lora|Raleway:700|Source+Code+Pro|Quicksand:500|Quicksand:700&display=swap');
+
+$base-font-family: "Lora";
+
+$base-font-size:   18px !default;
+$base-font-weight: 500 !default;
+$base-line-height: 1.5 !default;
+$base-letter-spacing: 0;
+
+$small-font-size:  $base-font-size * 0.875 !default;
+
+$title-font-family: "Quicksand";
+$title-font-weight: 700;
+
+$header-font-family: "Raleway";
+$header-font-weight: 700;
+
+$code-font-family: "Source Code Pro";
+$code-font-size:   14px !default;
+$code-font-weight: 400 !default;
+$code-line-height: 1.5 !default;
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}

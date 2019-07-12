@@ -1,21 +1,5 @@
 @charset "utf-8";
 
-// Font for title
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro|Quicksand:700&display=swap');
-
-$base-font-family: "Open Sans";
-$title-font-family: "Quicksand";
-$code-font-family: "Source Code Pro";
-
-$base-font-size:   18px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$code-font-size:   14px !default;
-$code-font-weight: 400 !default;
-$code-line-height: 1.5 !default;
-
 $spacing-unit:     30px !default;
 
 $text-color:       #111 !default;
@@ -48,11 +32,8 @@ $on-laptop:        800px !default;
   }
 }
 
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
 @import
+"devnotes/font",
 "devnotes/base",
 "devnotes/layout",
 "devnotes/syntax-highlighting";

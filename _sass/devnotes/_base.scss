@@ -28,18 +28,25 @@ ul, ol, dl, figure,
 /** Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    margin: 0;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
+
+    font-weight:    $base-font-weight;
+    font-size:      $base-font-size;// #{$base-font-size}/#{$base-line-height};
+    font-family:    $base-font-family;
+    letter-spacing: $base-letter-spacing;
+    line-height: $base-line-height;
+
+   -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings:    "kern" 1;
     -o-font-feature-settings:      "kern" 1;
     font-feature-settings:         "kern" 1;
     font-kerning:   normal;
-    display:        flex;
+
     min-height:     100vh;
+    margin: 0;
+    color: $text-color;
+    background-color: $background-color;
+     display:        flex;
     flex-direction: column;
 }
 
@@ -74,7 +81,7 @@ main {
  * Links
  */
 a {
-    color: $brand-color2;
+    color: darken($brand-color2, 25%);
     text-decoration: none;
 
     &:visited {
@@ -103,18 +110,39 @@ a {
  */
 pre, code{
     font: $code-font-weight #{$code-font-size}/#{$code-line-height} $code-font-family, monospace;
-    overflow: scroll;
+    overflow: auto;
 }
 
 pre{
     padding: 5px;
 }
 
+/** Headers
+ */
+h1, h2, h3, h4, h5, h6{
+    color: #333333;
+    font-family: $header-font-family;
+    font-weight: $header-font-weight;
+}
+
 h1{
-    font: 38px $base-font-family;
-    font-weight: bold;
-    line-height: 1;
     color: $brand-color2;
+    font-size: 38px;
+    line-height: 1;
+}
+
+/** Site Title
+ */
+
+.site-title,
+.site-title:hover,
+.site-title:visited{
+    font-family: $title-font-family, sans-serif;
+    font-size: 48px;
+    font-weight: $title-font-weight;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+    color: $brand-color;
 }
 
 /**
@@ -135,4 +163,41 @@ h1{
     li + li {
         padding-top: 0px;
     }
+}
+
+/** Posts
+ */
+
+.post-list{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.post-list li{
+    margin-bottom: 10px;
+}
+
+.post-meta{
+    font-size: 16px;
+    font-family: $title-font-family;
+    font-weight: 400;
+    color: #999999;
+}
+
+.post-list h3{
+//    font-family: $title-font-family;
+    font-size: 22px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.post-link{
+    color: $brand-color2;
+    text-decoration: none;
+}
+
+.post-link:hover{
+    text-decoration: underline;
 }
