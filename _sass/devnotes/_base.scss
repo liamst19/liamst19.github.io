@@ -50,25 +50,6 @@ body {
     flex-direction: column;
 }
 
-/** Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right:  auto;
-    margin-left:   auto;
-    padding-right: $spacing-unit;
-    padding-left:  $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
 /** `main` element
  */
 main {
@@ -120,7 +101,7 @@ pre{
 /** Headers
  */
 h1, h2, h3, h4, h5, h6{
-    color: #333333;
+    color: $grey-color-dark;
     font-family: $header-font-family;
     font-weight: $header-font-weight;
     line-height: $header-line-height;
@@ -129,17 +110,21 @@ h1, h2, h3, h4, h5, h6{
 h1{
     color: $brand-color2;
     font-size: 38px;
-    line-height: 1;
+//    line-height: 1;
 }
 
 /** Site Title
  */
 
 .site-header.home .site-title{
-    font-size: 144px;
+    font-size: 145px;
+    line-height: 1;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 
     @include media-query($on-palm){
-        font-size: 72px;
+        font-size: 75px;
     }
 }
 
@@ -151,10 +136,13 @@ h1{
     font-weight: $title-font-weight;
     text-decoration: none;
     letter-spacing: -0.04em;
+    line-height: 1;
     color: $brand-color;
+    padding-left: 10px;
 }
 
 .site-title .title-cursor{
+//    color: #dddddd;
     font-family: $code-font-family;
     margin-bottom: 5px;
     animation: 1s blinker linear infinite;
@@ -204,10 +192,10 @@ h1{
  */
 
 .post-list-heading{
-    background-color: #ffed33;
+    background-color: $yellow-color;
     margin: 0;
     padding: 8px 10px;
-    color: #777777;
+    color: $grey-color;
     font-size: 24px;
     //    font-family: $title-font-family;
 }
@@ -217,36 +205,37 @@ h1{
     margin: 0;
     padding: 0;
     // border-top: 3px solid #ffed99;
-    border-bottom: 1px solid #ffed33;
+    border-bottom: 1px solid $yellow-color;
 }
 
 .post-list li{
-    border-top:    1px solid #ffed33;
-    margin-bottom: 0px;
-    padding: 5px 10px;
+    border-top:    1px solid $yellow-color;
+    margin: 0px;
+    padding: 10px 10px 5px;
     display: flex;
 }
 
 .post-list h3{
     flex-direction: column;
-    width: 88%;
+    width: 90%;
     font-size: 18px;
     margin: 0;
+    padding: 0;
 }
 
 .post-list .post-meta{
     flex-direction: column;
-    width: 12%;
+    width: 100px;
 }
 
 .post-list h3 a{
-    color: $brand-color;
-    background-color: #777;
+    color: $brand-color2;
+    background-color: $grey-color;
     padding: 0 2px;
 
     &:hover{
-        color: $brand-color2;
-        background-color: #CCC;
+        color: darken($brand-color2, 25%);
+        background-color: $grey-color-light;
     }
 }
 
@@ -254,7 +243,7 @@ h1{
     font-size: 14px;
     font-family: $title-font-family;
     font-weight: 400;
-    color: #777777;
+    color: $grey-color;
 }
 
 .post-link{
@@ -267,7 +256,7 @@ h1{
 }
 
 .post hr{
-    border-color: #ffed66;
+    border-color: $yellow-color;
     border-style: solid;
     //    border-radius: 3px;
 }
@@ -277,24 +266,12 @@ h1{
     margin: 0;
 }
 
-.post-title-hr1{
-    border-width: 3px;
-}
-
-.post-title-hr2{
-    border-width: 1px;
-    margin-top: -7px;
-}
-
-.post-title-hr3{
-    border-width: 1px;
-}
-
-.post-title-hr4{
-    border-width: 3px;
-    margin-top: -7px;
-}
-
 .post-header .post-meta{
     margin-top: -5px;
+}
+
+.post-title .post-title-text{
+    background: $grey-color;
+    line-height: 1.15;
+    padding: 0 2px;
 }
