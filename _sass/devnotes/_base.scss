@@ -119,12 +119,13 @@ h1{
 .site-header.home .site-title{
     font-size: 145px;
     line-height: 1;
-    overflow: hidden;
     margin: 0;
     padding: 0;
 
     @include media-query($on-palm){
-        font-size: 75px;
+        // font-size: 55px;
+        // font-size: 17vw;
+        margin-left: 0.4em;
     }
 }
 
