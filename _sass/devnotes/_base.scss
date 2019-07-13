@@ -123,8 +123,8 @@ h1{
     padding: 0;
 
     @include media-query($on-palm){
-        // font-size: 55px;
-        // font-size: 17vw;
+        font-size: 55px;
+        font-size: 17vw;
         margin-left: 0.4em;
     }
 }
