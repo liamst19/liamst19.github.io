@@ -7,9 +7,14 @@ categories:
 
 [Demo page](https://liamst19.github.io/react-scroll-demo/)
 
-One thing I have been noticing while browsing websites is that a lot of them have animated effects that are triggered when they scroll into view. I was curious how they did that, so [I tried to recreate the effect](https://github.com/liamst19/react-scroll-demo).
+One thing I have been noticing while browsing websites is that a lot of them have animations that are triggered when they scroll into view. Some notable examples:
 
-After looking around it seemed that the simplest way is to use add an event handler to the `onScroll` event, which compares the top and bottom positions of the element with that of the `document`'s. In more recent browsers, the element dimensions were provided with the `Element.getBoundingClientRect()` function:
+- [Nintendo's BOXBOY! + BOXGIRL! game website](http://boxboy.nintendo.com/).
+- [Davide Perozzi's portfolio website](https://davideperozzi.com/)
+
+I was curious how they did that, so [I tried to recreate the effect](https://github.com/liamst19/react-scroll-demo).
+
+After looking around it seemed that the simplest way to approximate the effects seen in the examples is to use add an event handler to the `onScroll` event, which compares the top and bottom positions of the element with that of the `document`'s. In more recent browsers, the element dimensions were provided with the `Element.getBoundingClientRect()` function:
 
 ``` javascript
 // Checks whether the element is in viewport
