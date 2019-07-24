@@ -16,9 +16,13 @@ After looking around it seemed that the simplest way is to use add an event hand
 function isInViewport(element){
     var rect = element.getBoundingClientRect();
     
-    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    return rect.top >= 0 
+        && rect.bottom <= (window.innerHeight 
+            || document.documentElement.clientHeight);
     // If we're also checking horizontally, append
-    // (rect.left >= 0 && (window.innerWidth || document.documentElement.clientWidth))
+    // (rect.left >= 0 
+        && (window.innerWidth 
+            || document.documentElement.clientWidth))
 }
 ```
 
