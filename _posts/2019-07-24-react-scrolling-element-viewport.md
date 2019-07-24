@@ -20,9 +20,9 @@ function isInViewport(element){
         && rect.bottom <= (window.innerHeight 
             || document.documentElement.clientHeight);
     // If we're also checking horizontally, append
-    // (rect.left >= 0 
-        && (window.innerWidth 
-            || document.documentElement.clientWidth))
+    // && (rect.left >= 0 
+    //    && (window.innerWidth 
+    //        || document.documentElement.clientWidth))
 }
 ```
 
